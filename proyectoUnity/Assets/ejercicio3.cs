@@ -7,7 +7,8 @@ public class ejercicio3 : MonoBehaviour
 
     [SerializeField] string nombreIns = "Elisa";
     [SerializeField] float num1, num2, opcion;
-        float numres;
+    bool activo = false;
+    float numres;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,37 @@ public class ejercicio3 : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-    
+
+    {     /* 
+           * 
+          
+       
+        if (Input.GetKeyDown("space"))
+        {
+            if(activo)
+            {
+                StopCoroutine("Segundos");
+                activo = false;
+
+            } else if(activo==false)
+            {
+                StartCoroutine("Segundos");
+                activo = true;
+            }
+        }
+
+        */
+
+
+        if (Input.GetKey("space"))
+        {
+            StartCoroutine("Segundos");
+        } else
+        {
+            StopCoroutine("Segundos");
+        }
+       
+
     }
 
     float Opera(float num1, float num2)
