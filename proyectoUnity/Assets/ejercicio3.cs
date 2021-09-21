@@ -12,10 +12,10 @@ public class ejercicio3 : MonoBehaviour
     void Start()
     {
         //Ejercicio 3 a
-     //  StartCoroutine("Saludo");
+       // Saludo(nombreIns);
 
         //Ejercicio 3b
-        Opera(num1, num2);
+       // Opera(num1, num2);
        
 
         //Ejercicio 3c
@@ -81,14 +81,9 @@ public class ejercicio3 : MonoBehaviour
         }
     }
 
-    IEnumerator Saludo()
-    {  yield return new WaitForSeconds(3f);
-      
-          
+    void Saludo(string nombreIns)
+    { 
             print("Hola " + nombreIns);
-        
-       
-        
-}
+     }
 
 }
