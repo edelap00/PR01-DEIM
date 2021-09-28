@@ -6,7 +6,10 @@ public class movClase : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed = 0;
+    public float speed1 = 5.0f;
+    public float speed2 = 3.0f;
+    public float speed3 = 1.0f;
+
     void Start()
     {
         
@@ -17,7 +20,9 @@ public class movClase : MonoBehaviour
     {
         //----INTERACTIVIDAD//
         //lo multiplico por deltaTime, valor del eje y velocidad
-        transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal") * speed);
+       // transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal") * speed);
+
+        //Contador//
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -27,6 +32,19 @@ public class movClase : MonoBehaviour
         {
             StopCoroutine("Contador");
         }
+
+        // movimientos nave
+        //mov eje 1
+        float DesplY = Input.GetAxis("Vertical") * speed1;
+        transform.Translate(Vector3.up * DesplY * Time.deltaTime);
+
+        //mov eje 2
+        float DesplX = Input.GetAxis("Horizontal") * speed2;
+        transform.Translate(Vector3.left * DesplX * Time.deltaTime);
+
+        //mov eje 3
+       //  float DesplZ = Input.GetAxis("") * speed3;
+        // transform.Translate(Vector3.forward * DesplZ * Time.deltaTime);
 
     }
 

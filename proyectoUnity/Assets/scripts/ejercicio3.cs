@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// También está aquí el ejercicio 4a
 public class ejercicio3 : MonoBehaviour
 {
 
