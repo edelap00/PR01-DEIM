@@ -43,8 +43,8 @@ public class movClase : MonoBehaviour
         transform.Translate(Vector3.left * DesplX * Time.deltaTime);
 
         //mov eje 3
-       //  float DesplZ = Input.GetAxis("") * speed3;
-        // transform.Translate(Vector3.forward * DesplZ * Time.deltaTime);
+        float DesplZ = Input.GetAxis("Profundidad") * speed3;
+        transform.Translate(Vector3.forward * DesplZ * Time.deltaTime);
 
     }
 
